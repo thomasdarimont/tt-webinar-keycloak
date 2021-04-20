@@ -11,7 +11,7 @@ services:
       - KEYCLOAK_IMPORT=/tmp/keycloak/webinar-realm.json
       - JAVA_OPTS=-Dkeycloak.profile.feature.upload_scripts=enabled
     volumes:
-      - ./keycloak:/tmp/keycloak
+      - ./keycloak:/tmp/keycloak:z
   api:
     build:
       context: src/api/.
